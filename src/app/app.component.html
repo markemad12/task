@@ -1,0 +1,93 @@
+<div class="contianer">
+  <p>
+    {{'hello world' | uppercase}}
+  </p>
+  <p>
+    {{'hello world' | lowercase}}
+  </p>
+  <p>
+    {{'hello world' | titlecase}}
+  </p>
+  <ul>
+    <li *ngFor="let item of arr | slice: 0:2">{{item}}</li>
+  </ul>
+  <p>total : {{500 | currency}}</p>
+  
+  {{obj | json}}
+  
+  <hr/>
+  
+  <div class="">
+  short: {{currentdate | date:'short'}}
+  </div>
+  <div class="">
+    medium: {{currentdate | date:'medium'}}
+    </div>
+    <div class="">
+      long: {{currentdate | date:'long'}}
+      </div>
+      <div class="">
+        full: {{currentdate | date:'full'}}
+        </div>
+
+  <hr/>
+  
+  <div class="">
+  short: {{currentdate | date:'shortDate'}}
+  </div>
+  <div class="">
+    medium: {{currentdate | date:'mediumDate'}}
+    </div>
+    <div class="">
+      long: {{currentdate | date:'longDate'}}
+      </div>
+      <div class="">
+        full: {{currentdate | date:'fullDate'}}
+        </div>
+
+        <hr/>
+  
+  <div class="">
+  short: {{currentdate | date:'shortTime'}}
+  </div>
+  <div class="">
+    medium: {{currentdate | date:'mediumTime'}}
+    </div>
+    <div class="">
+      long: {{currentdate | date:'longTime'}}
+      </div>
+      <div class="">
+        full: {{currentdate | date:'fullTime'}}
+        </div>
+
+        <hr/>
+        <div class="">
+          format: {{currentdate | date:'yyyy-MM-dd'}}
+        </div> 
+
+
+
+        <!-- {{posts | async | json}} -->
+
+        <div *ngFor="let item of posts | async">
+          {{item.title}}
+        </div>
+
+        <div *ngFor="let item of arr$ | async">
+          {{item.name}}
+        </div>
+
+        <div *ngFor="let item of posts | async">
+          {{item.title | truncate:20}}
+        </div>
+</div>
+
+<hr/>
+<h1>New Syntax</h1> 
+<!-- <div class="" *ngIf="ture"></div>
+@if {ture}{
+  <h1>New If</h1>
+}@else {
+  <h1>New Else</h1>
+} -->
+
